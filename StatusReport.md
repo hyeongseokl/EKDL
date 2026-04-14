@@ -9,8 +9,6 @@ As you can see there are spikes for all 3 variables in 2020 due to the COVID-19 
 
 We also created a correlation heatmap. We also standardized our data so not one variable dominates our model’s prediction. 
 
-![heatmap](Screenshot 2026-04-14 at 6.31.25 PM.png)
-
 We will try multiple different types of models including linear regression (simple and lagged), tree-based models including Random Forest and XGBoost, and time series models such as ARIMA models. We will first start with just using the mean as a baseline model so we can compare how well our model performs compared to this baseline.
 
  From just the simple unemployment rate mean, we get an unemployment rate of 5.79% with an RMSE of 1.61 percentage points. This means that our models that we build should have an RMSE of at least below 1.61 percentage points to know that our model is giving any predictive power at all. 
