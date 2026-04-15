@@ -23,7 +23,8 @@ So now we fit a new model with lagged X features as well as a lagged version of 
 
 Changes in project plan based on feedback given in Project plan Milestone 2. Since then, both partners committed files to the repo. For project plan milestone 2 we both worked on the document however only one partner submitted the file into Github. For milestone 3 we both created contributions to the dataset by cleaning, merging and analyzing the data and building off each other's work.
 
-As for dataset integration, we clearly stated how GDP, Unemployment rate and Inflation affect each other. And the reasoning why we decided to move forward with these datasets. 
+As for dataset integration, we clearly stated how GDP, Unemployment rate and Inflation affect each other. And the reasoning why we decided to move forward with these datasets. GDP reflects overall economic growth, unemployment rate shows the condition of the labor market and inflation helps capture the changes in price across the economy. Using these patterns, we decided to move forward using these datasets to conduct further analysis. We also were able to prove that these datasets were highly credible, publicly available and can be merged through the date column. 
+
 
 New data:
 https://fred.stlouisfed.org/series/CUSR0000SAC 
