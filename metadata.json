@@ -1,0 +1,96 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "Predicting U.S. Unemployment Using Macroeconomic Indicators",
+  "description": "A quarterly time series dataset integrating U.S. GDP growth rate, unemployment rate, and Consumer Price Index for commodities from 1956 to 2025. Built to support predictive modeling of U.S. unemployment using macroeconomic indicators. Datasets were sourced from the Federal Reserve Bank of St. Louis FRED database, cleaned, aggregated to quarterly frequency, and merged on observation date.",
+  "url": "https://github.com/hyeongseokl/EKDL",
+  "identifier": "https://github.com/hyeongseokl/EKDL",
+  "keywords": [
+    "unemployment",
+    "GDP",
+    "macroeconomics",
+    "Consumer Price Index",
+    "time series",
+    "predictive modeling",
+    "United States",
+    "FRED",
+    "Ridge Regression",
+    "Random Forest",
+    "XGBoost"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Ethan Kim"
+    },
+    {
+      "@type": "Person",
+      "name": "Hyeongseok David Lee"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "University of Illinois Urbana-Champaign"
+  },
+  "temporalCoverage": "1956-01-01/2025-10-01",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "United States"
+  },
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "gdp_growth_rate",
+      "description": "Quarterly percent change in real U.S. GDP, seasonally adjusted at annual rates",
+      "unitText": "Percent"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "unemployment_rate",
+      "description": "Seasonally adjusted U.S. unemployment rate, averaged to quarterly frequency",
+      "unitText": "Percent"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cpi_commodities",
+      "description": "Consumer Price Index for All Urban Consumers: Commodities, averaged to quarterly frequency. Baseline 1982-1984 = 100.",
+      "unitText": "Index"
+    }
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://github.com/hyeongseokl/EKDL/blob/main/joined_data.csv",
+      "name": "joined_data.csv"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://fred.stlouisfed.org/series/A191RL1Q225SBEA",
+      "name": "GDP Growth Rate (FRED)"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://fred.stlouisfed.org/series/UNRATE",
+      "name": "Unemployment Rate (FRED)"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://fred.stlouisfed.org/series/CUSR0000SAC",
+      "name": "CPI Commodities (FRED)"
+    }
+  ],
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Federal Reserve Bank of St. Louis FRED",
+    "url": "https://fred.stlouisfed.org"
+  },
+  "measurementTechnique": "Data was downloaded from FRED as CSV files, aggregated from monthly to quarterly frequency using averaging, merged on observation date using an inner join, and processed using Python and pandas.",
+  "datePublished": "2026-05-03",
+  "inLanguage": "en"
+}
