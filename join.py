@@ -1,8 +1,12 @@
 import pandas as pd
+import os
 
-unrate = pd.read_csv("UNRATE.csv")
-gdp = pd.read_csv("A191RL1Q225SBEA.csv")
-cusr = pd.read_csv("CUSR0000SAC.csv")
+data_dir = "data"
+
+
+unrate = pd.read_csv(os.path.join(data_dir, "UNRATE.csv"))
+gdp = pd.read_csv(os.path.join(data_dir, "A191RL1Q225SBEA.csv"))
+cusr = pd.read_csv(os.path.join(data_dir, "CUSR0000SAC.csv"))
 
 unrate["observation_date"] = pd.to_datetime(unrate["observation_date"])
 gdp["observation_date"] = pd.to_datetime(gdp["observation_date"])
