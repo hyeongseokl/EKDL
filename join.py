@@ -1,5 +1,16 @@
 import pandas as pd
 import os
+import hashlib
+
+print(" Verifying data integrity with hashsum")
+checksums = {
+    'data/UNRATE.csv': '084d2f0cfe41575534b96bd51b88c6e93ddc8d5f0eca7e470ecfd19f5428c94f',
+    'data/A191RL1Q225SBEA.csv': '7073efd95569338ce199677224a4af5be28758dddfd3146185dc5ee99630b667',
+    'data/CUSR0000SAC.csv': 'c7d7fd2554fecf460e2fb590ba260056e524f8fef558a3773e63d6d6c6ba4eb9'
+}
+for f, expected in checksums.items():
+    actual = hashlib.sha256(open(f, 'rb').read()).hexdigest()
+    print(f"{f}: {actual}")
 
 data_dir = "data"
 
